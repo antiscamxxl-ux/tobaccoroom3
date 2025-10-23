@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobacco Room 46</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="custom-background"></div>
+
+    <div id="welcome-screen" class="screen active">
+        <img id="shop-logo" src="image_5635c1.jpg" alt="Tobacco Room 46 Logo" class="logo-image">
+        
+        <h1 class="welcome-text">Приветствуем вас в <br>TOBACCO ROOM 46</h1>
+        
+        <button id="continue-button" class="main-button hidden">
+            Продолжить
+        </button>
+    </div>
+
+    <div id="shop-screen" class="screen">
+        <header class="shop-header">
+            <h2 class="shop-title">TOBACCO ROOM 46</h2>
+            
+            <div class="header-actions">
+                <button id="view-cart-button" class="cart-button-header">
+                    🛒 (<span id="cart-counter">0</span>)
+                </button>
+                <button id="open-question-modal" class="question-button">
+                    Задать вопрос
+                </button>
+            </div>
+        </header>
+
+        <div id="content-area">
+            </div>
+    </div>
+    
+    <div id="cart-screen" class="screen">
+        <header class="shop-header">
+            <h2 class="shop-title">Ваша Корзина</h2>
+            <button id="back-from-cart" class="question-button" style="background-color: #6c757d;">
+                ← В магазин
+            </button>
+        </header>
+
+        <div id="cart-items-container" class="products-list">
+            <p id="empty-cart-message">Ваша корзина пуста.</p>
+        </div>
+
+        <div id="cart-summary" class="summary-box hidden">
+            <p>Итого: <span id="cart-total-price" style="font-weight: bold;">0 ₽</span></p>
+            <button id="checkout-button" class="action-button">
+                Оформить заказ
+            </button>
+        </div>
+    </div>
+    
+    <div id="checkout-screen" class="screen">
+        <header class="shop-header">
+            <h2 class="shop-title">Оформление заказа</h2>
+            <button id="back-to-cart" class="question-button" style="background-color: #6c757d;">
+                ← В корзину
+            </button>
+        </header>
+
+        <form id="checkout-form" class="checkout-form-container">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" required placeholder="Как к вам обращаться">
+            
+            <label for="user-phone">Телефон (по желанию):</label>
+            <input type="tel" id="user-phone" placeholder="+7...">
+            
+            <label for="user-address">Комментарий / Адрес:</label>
+            <textarea id="user-address" placeholder="Например, удобное время для доставки"></textarea>
+            
+            <p class="summary-text">Сумма заказа: <span id="final-total-price" style="font-weight: bold;">0 ₽</span></p>
+            
+            <button type="submit" id="place-order-button" class="main-button">
+                Подтвердить и отправить заказ
+            </button>
+        </form>
+    </div>
+
+    <div id="question-modal" class="modal">
+        <div class="modal-content">
+            <h3>Задать вопрос</h3>
+            <textarea id="modal-question-input" placeholder="Введите ваш вопрос..."></textarea>
+            <div class="modal-actions">
+                <button id="modal-send-button" class="action-button" style="background-color: var(--primary-blue);">Отправить</button>
+                <button id="modal-close-button" class="secondary-button">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
