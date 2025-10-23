@@ -6,7 +6,7 @@ try {
     console.error("Telegram Web App SDK is not available.");
 }
 
-const BACKEND_URL = 'https://antiscamxxl-ux.github.io/tobaccoroom3/'; // ЗАМЕНИТЕ НА ВАШ URL
+const BACKEND_URL = 'https://antiscamxxl-ux.github.io/tobaccoroom3'; // ЗАМЕНИТЕ НА ВАШ URL
 
 // Элементы
 const welcomeScreen = document.getElementById('welcome-screen');
@@ -426,4 +426,5 @@ modalSendButton.addEventListener('click', async () => {
         modalSendButton.disabled = false;
         modalSendButton.textContent = 'Отправить';
     }
+
 });
