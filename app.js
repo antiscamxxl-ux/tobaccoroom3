@@ -6,7 +6,7 @@ try {
     console.error("Telegram Web App SDK is not available.");
 }
 
-const BACKEND_URL = 'http://localhost:3000'; // ЗАМЕНИТЕ НА ВАШ URL
+const BACKEND_URL = 'http://178.68.80.60:3000'; // ЗАМЕНИТЕ НА ВАШ URL
 
 // Элементы
 const welcomeScreen = document.getElementById('welcome-screen');
@@ -428,4 +428,5 @@ modalSendButton.addEventListener('click', async () => {
     }
 
 });
+
 
